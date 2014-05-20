@@ -1,1 +1,29 @@
 git information
+
+git is a powerful version control system, really. it's a remarkable tool used
+ to store different versions of files. from the jump, head over to github.com
+ and create a new repository, and since we aren't paying for private, please
+ make the repo public, which simply allows the masses to view the files.
+ create the name of the repo, and initialize it with a README.md file. we also
+ add a .gitignore file, and .gitignore is rather interesting, as .gitignore
+ stores files, though, they're hidden. being, the owner can see the files.
+ however, the outsiders can't. pretty fucking cool. wooo wooo!
+
+ okay, now for the nitty gritty, right.
+
+here goes:
+
+from the top: first push to git!
+
+touch file name
+git init
+git add file name
+git commit -m "first commit and or change"
+git remote add origin repo name
+git push -u origin master
+
+second push and moving forward. holla
+git status
+git add file-name
+git commit -m "changes made"
+git push
