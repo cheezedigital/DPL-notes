@@ -28,8 +28,11 @@ git add file-name
 git commit -m "changes made"
 git push
 
-on branching with git 
+on branching with git
 
 git checkout -b new_branch_name --create the new branch and checks out
 git checkout master
 git checkout new_branch_home
+
+sending change from code from clone back up to github?
+at first, we need permission from the owners repo.
