@@ -49,3 +49,13 @@ String Commands
 .downcase - changes all to string letters to lowercase
 .reverse - reverses order of string
 .capitalize - capitalizes first word/letter
+
+there are four variables
+
+local_variable = "hello"
+
+@instance_variable = "justin"
+
+@@class_variable = "human"
+
+$glabal_variable = "DO NOT USE"
