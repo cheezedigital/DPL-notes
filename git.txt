@@ -36,3 +36,32 @@ git checkout new_branch_home
 
 sending change from code from clone back up to github?
 at first, we need permission from the owners repo.
+
+terminal master branch
+mkdir
+cd
+atom html
+atom css
+git init
+git add .
+git commit -m "passing in a small message"
+
+terminal
+github
+make a new repo
+
+terminal
+git remote add origin [url]
+git push origin master
+
+terminal branch
+git checkout -b [branch file]
+atom [branch name]
+git add .
+git commit -m "adds"
+git push origin [branch file]
+
+terminal master branch
+git checkout master
+git merge [branch file]
+git push origin master
