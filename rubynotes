@@ -226,3 +226,29 @@ current_year = Time.now.year
 	puts current_year
 
 >2014
+
+conditional statements =
+true
+false
+nil
+
+if my_age > 20
+ puts "Gonna drink some this weekend!"
+end
+
+loops
+
+while loop
+
+nemo_is_still_lost = true
+puts "oh no! Nemo is lost"
+while nemo_is_still_lost
+ puts "just keep swiming"
+ puts "did you find nemo?"
+ answer = gets.chomp
+ if answer =='yes'
+  nemo_is_still_lost = false
+ end
+end
+
+variable assignment value
