@@ -1,0 +1,41 @@
+Terminal / irb -
+
+cd ~ : ~ shortcut to home directory
+
+“ “ : wrapped in “ “ is a string. a string is a data type. a number is a also a data type.
+
+fixed number : a fixnum is a integer data type. a whole number
+
+float: a number whether its positive or negative with a decimal point is a float
+	a float / a float = will equal a float
+	fixnum / a float = will eqaul a float
+
+dataType .class : type something with .class and it will tell you what data type you are working with
+	EX: -1.class => fixnum
+
+each data type has a set of predefined methods.
+	Ex : strings know what .upcase or .downcase is. numbers do not.
+
+method chaining: chaining methods together.
+	Ex : “lia”.upcase.reverse
+
+= : =  (equals) means assignment. take a value and assign it to a variable.
+	EX : name = “lia”
+
+in algebra you can do x + y = z but in ruby you cannot. you would put z = x + y
+
+*, / , +, - , all these math symbols are methods
+
+irb :
+
+irb : interactive ruby. just used for testing stuff. for running actual Ruby need to exit out of irb.
+
+exit : exits irb
+
+cntrl c : exits the thing you are working on
+
+puts : puts string. means to print out
+
+
+
+Bash - what is called a shell
