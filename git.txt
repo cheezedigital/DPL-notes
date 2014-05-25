@@ -37,6 +37,14 @@ git checkout new_branch_home
 sending change from code from clone back up to github?
 at first, we need permission from the owners repo.
 
+
+
+
+
+
+
+
+
 terminal master branch
 mkdir
 cd
