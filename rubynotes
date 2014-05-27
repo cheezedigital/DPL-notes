@@ -252,3 +252,252 @@ while nemo_is_still_lost
 end
 
 variable assignment value
+
+Datatypes = time, symbol, date, array, strings, fixum, floats, hash
+
+examples of using hash would be
+
+array
+dog_names = [“max”, “althea”]
+
+hash
+aniamls = {“max” => “dog”, “fluffy” => “cat”}
+
+the purpose of using either
+
+dog_names = [“max”, “fido”]
+
+dog = {:name => “max”, :breed => “poodle”, :age  => 3}
+
+dog2 = {:name => “fido”, :breed => “chihuanhua”, :age => 6}
+
+dogs = [dog, dog2]
+
+sudo code = basically write our thought process for solving a problem. not actually writing code.
+
+I need to write a program that cooks breakfast.
+
+grab_frying_pan
+grab_utencils
+grab_ingredients (“eggs”, “bacon”, “toast”)
+
+thing_being_cooked =
+place_ingredients_into_pan (“bacon”)
+
+if ingredient_being_is_cooked
+	remove_ingredient_from_pan
+	place_ingredient_on_plate
+
+
+
+
+
+serve_food
+
+*note: need to know what i’m cooking
+
+
+conditionals in ruby =
+if some_condition
+  do_stuff
+end
+conditions are looking for either yes, or no.
+
+if burgers_are_done
+   take_them_off_the_grill
+end
+
+to understand this fully, we need to introduce some new datatypes
+
+Boolean = is when we are referencing either yes or no, however, for boolean we use true and false.
+if burgers are done  true or false
+
+true
+false
+
+if nil
+if something is nil = something is nothing
+false and nil are the only 2 things in ruby that equate to being false. if it isn’t false, or nil, then it’s true.
+
+if your age is greater than or equal to
+if my_age >= 21
+ puts “gonna drink some beer this weekend”
+end
+
+comparison operators
+> greater than
+< less
+>= greater than or equal
+<= less than or equal
+== both sides are the same
+!=
+
+conditional operators
+&&
+||
+
+
+if x_in_space_1 && x_in_space_2 && x_in_space_3
+ puts “x wins!”
+end
+
+if x in space and x in space and x in space
+
+if you_drive_a_truck || you_drive_a_car
+ puts “can I get a ride?”
+end
+
+8 possible solutions for tic tac toe
+
+if x_in_top_left && x_in_top_mid && x_in_top_right ||
+  x_in_mid_left && x_in_mid_mid && x_in_mid_right ||
+ x_in_bot_left && x_in_bot_mid && x_in_bot_right
+ puts “x wins!”
+end
+
+if we’re doing if statements we need a fall back plan. what happens if our plan keeps returning false.
+
+if your_age > 20
+  puts “come drink beer with me”
+else
+ puts “you can come, too, but gotta drink kook-aid”
+end
+
+unless your_car_is_working
+ puts “hit me up, and I’ll give you a lift”
+end
+
+if your_age == my_age
+  puts “we’re the same age!”
+end
+
+what if I wanted to say not equal. if your age is not e
+
+if your_age != my_age
+  puts “we’re different ages”
+end
+! = bang
+
+
+unless you_already_ate
+puts “let’s grab lunch”
+end
+
+puts “lets grab lunch” unless you_already_ate
+
+puts “welcome, user” if user_signs_in
+
+what if we have numerous conditions.
+
+if your grade on the test is 90-100, otherwise, if your grade is 80-90, otherwise your grade is 70-80 otherwise your grade is 60-70 otherwise you fail
+
+if your_grade > 90
+ puts “You get an A”
+elsif your_grade >= 80 && your_grade < 90
+ puts “you get a B”
+elsif your_grade >= 70 && your_grade <80
+ puts “you get a c”
+elsie your_grade >=60 && your_grade <70
+ puts “you need to study more”
+else
+puts “you fail”
+end
+
+
+
+grade = ‘A’
+
+case grade
+when ‘A’
+   puts “Yay! ice cream for you”
+when ‘B’
+  puts “not too shabby”
+when ‘C’
+ puts “might want to put some time into that”
+when ‘D’
+ puts “not doing too well”
+when ‘F’
+ puts “ok, you failed”
+else
+puts “not sure how you managed to get a #{grade}”
+end
+
+this comes in handy when something will or when something will be that
+
+case doomsday
+when ‘zombie apocalypse’
+ puts “yikes”
+when ‘zombie jesus’
+when ‘earthquake’
+end
+
+a = “A”
+b = “B”
+grade = “A”
+
+case grade
+when a
+   puts “you got A”
+when b
+   puts “you got a B”
+end
+
+
+
+RUBY NOTES
+a method changes the oject it's called from so the string data type is altered.
+
+case day
+when "monday"
+  puts "monday blues"
+when "tuesday"
+  puts "hello there"
+when "wednesday"
+  puts "hump day"
+when "thursday"
+  puts "thirsty thursday"
+when "friday"
+  puts "yay!"
+else
+  puts "it's the weekend bitches!"
+end
+
+sun_is_up = true
+
+while sun_is_up
+  puts "do stuff"
+  is Time.now.hour > 7
+    sun_is_up = false
+  end
+end
+
+"hello".reverse
+"hello".length
+"hello".upcase
+
+puts "hello"
+
+a method is basically a way to name a set of instrucitons.
+
+puts is also a method.
+
+writing a method
+
+when creating our own methods we create  def
+
+def method_name
+
+end
+
+def does_x_win
+
+end
+
+def does_o_win
+
+end
+def is short for define. defining a method
+def grab_food
+  puts "grabbing some food"
+  puts "and it's good!"
+end
