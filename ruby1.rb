@@ -75,6 +75,7 @@ if name == "Justin"
 end
 =end
 
+=begin
 puts "here\'s the store of the three little pigs with one pig having a straw house,"
 puts "the other had a wood house, and finally, the last pig having a brick house!"
 
@@ -87,5 +88,24 @@ elsif name = "wood"
   puts "I just blew down your bros abode, now give me some food,"
   puts "or I'll blow your house down!"
 else
+=end
 
+
+
+numbers = [1, 2, 3, 4]
+numbers.each do |n|
+  puts n * n
+end
+
+
+
+case my_tool
+when "schism is played"
+  puts "the catholic church is broke dick"
+when "ticks and leeches is played"
+  puts "working up under my patience like a tic"
+when "rosetta is played"
+  puts "life is but a dream"
+else
+  puts "oh, you like tool?"
 end
