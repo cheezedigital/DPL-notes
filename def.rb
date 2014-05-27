@@ -275,3 +275,141 @@ class Poster
     @typography = "matrix"
   end
 end
+
+#class, and instance method
+
+class Human
+
+  def age
+  end
+
+  def age=(some_new_age)
+  end
+#this method here is asking a question. that method will return true or false.
+#
+  def old_enough?
+  end
+end
+
+Class TicTacToe
+
+  def is_x_move?
+
+  end
+
+  def is_o_move?
+
+  end
+
+  def x_wins?
+
+  end
+
+  def o_wins?
+
+  end
+end
+#instance method
+class Human
+#! means method is going to be destructive.
+  def die!
+
+  end
+end
+
+#wow.downcase! the original object no longer has capital letters.
+
+class Human
+
+  def die!
+
+  end
+
+  def name_(new_name)
+
+  end
+
+  def old_enough_to_vote?
+
+  end
+
+  def age
+
+  end
+end
+
+#class method
+#
+class Human
+#class method.are called on the class itself.
+
+  def self.evolve
+   puts "monkey to super being"
+  end
+end
+#this is a class method
+class Human
+
+  def self.create_boy
+    baby = new
+    baby.sex = "male"
+    baby
+  end
+
+  def self.create_girl
+    baby = new
+    baby.sex = "female"
+    baby
+  end
+
+  def boy?
+    sex == "male"
+  end
+
+  def girl?
+    sex == "female"
+  end
+end
+#things you can put inside methods
+#anyting inside on methods
+#when it comes to methods, we call method on string, everything returns a value.
+#the return value from a method is going to be the last evulated thing from that method.
+
+#make a car object api
+#the car can drive
+#the direction it drives should dynamic
+#the car has a year, make, and model attributes
+
+#instantiate the object, and make the car drive. when driving, it should just print which direction its driving.
+#assign all the attributes a value
+class Car
+#the car has a year, make, and model attributes
+  attr_accessor :year, :make, :model
+
+  def initialize(make, model, year)
+    @make = make
+    @model = model
+    @year = year
+  end
+#the car can drive
+  def drive(direction)
+#the direction it drives should be dynamic
+    puts "the car is driving #{direction}"
+#when driving, it should just print out which direction it's driving
+  end
+end
+#instantiate the object.
+kia = Car.new
+#and make the car drive
+kia.drive("up")
+#asssign all the attributes a value for your car.
+kia.make = "kia"
+kia.model = "optima"
+kia.year = 2006
+#what is it called when () is added? arguements. call a method, passing arugements
+#
+my_car = Car.new("kia", "optima", 2006)
+puts "the car I drive is a #{kia.year} #{kia.make} #{kia.model}"
+
+your_car = Car.new("vw, "gti", 2002)
+puts "the car I drive is a #{your_car.make} #{your_car.model} #{your_car.name} #{your_car.year}"
