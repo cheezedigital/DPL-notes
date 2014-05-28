@@ -377,7 +377,7 @@ end
 
 #make a car object api
 #the car can drive
-#the direction it drives should dynamic
+#the direction it drives should be dynamic
 #the car has a year, make, and model attributes
 
 #instantiate the object, and make the car drive. when driving, it should just print which direction its driving.
