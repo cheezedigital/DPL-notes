@@ -501,3 +501,19 @@ def grab_food
   puts "grabbing some food"
   puts "and it's good!"
 end
+
+#turnary operator
+x = 4
+y = 5
+x < y ? "YEAH!" : "nope"
+"YEAH!"
+----------------------------------------
+#the whole purpose of having classes is because classes allow us to put down
+# our thoughts, and turn them into code. classes allow us to name things. things
+#we want to call on. when things have a name they're easier to call on.
+#it allows us to be more specific. container that has a label on it.
+
+#denpendices -----
+#how do we make our own files?
+#ruby has a loadpath, and the loadpath is an array of strings, and each one of the strings is
+#a path to where the files are located
