@@ -44,7 +44,7 @@ Chaining commands
 ---------------------------------------
 ===================
 String Commands
-===================
+================================================================================
 .upcase - changes all string letters to uppercase
 .downcase - changes all to string letters to lowercase
 .reverse - reverses order of string
@@ -59,7 +59,7 @@ local_variable = "hello"
 @@class_variable = "human"
 
 $glabal_variable = "DO NOT USE"
-
+================================================================================
 Ruby -
 
 Numbers & String : Ruby’s math and text objects
@@ -748,3 +748,187 @@ chronic (0.10.2)
 
     Natural language date/time parsing.
 ruby_stuff(master)$
+
+Exploring Ruby
+Ruby a.k.a MRI a.k.a CRuby
+Matz Ruby Implentation
+CRuby = is actually built in c, the c programming language.
+JRuby = came after ruby, and javavituralmachine, built in java.
+Native threating = just think of pipes or lanes on a highway, and adding more lanes
+when the lanes are all taken up
+Rubinius - Ruby built in Ruby
+MacRuby - Ruby in Obj-C
+Maglev =VMWare Gemstone (smalltalk) Ruby
+MRuby - Embedded Ruby - write ruby code and embed in a robot
+RubyMotion - Ruby for iOS
+Ruboto - Android Ruby
+MobiRuby - based of MRuby project, and if we can embed, then we should be able
+to do an iphone app since it's compiled. IronRuby - Ruby to C#.NET
+RubyInSteel - RubyVisualStuido
+Opalrb - Ruby to Javascript - starting to pick up some traction
+backend, is underneath the hood.
+Project Ideas -
+Gosu - 2D Video Game Framwork
+gosu is a ruby gem.
+Shoes - Cross Platform for desktop applications builder
+Chef - Multi-server management and deployment
+Highline - Rubygem for terminal based applications -
+Waves - 3D video game development in Ruby
+Ruby as a utility - solve everyday problems -
+
+ruby example - debugging
+================================================================================
+modules =
+used in two ways. as a name space. two, as a mixin
+name space = classes we're defining are inside a module.
+# module as a namespace
+module Vechile
+	class Car
+
+	end
+end
+
+my_shiney_new_car = Vechile::Car.new
+
+module Business
+	class Car
+	end
+end
+
+my_company_car = Business::Car.new
+
+using module as a name space.
+module Jeremy
+	class Array #this class already exsists in ruby
+		def push(thing)
+			puts "hello"
+		end
+	end
+end
+#module mixin
+
+module SaladDressing
+	def flavor_explosion
+		puts "NOMS IN YO MOUTH!"
+	end
+end
+
+class Salad
+	include SaladDressing
+end
+
+house = Salad.new
+house.flavor_explosion
+================================================================================
+
+when to pass in arguements
+
+class Human
+
+	def say(stuff, how_much)
+	 puts "eating #{stuff}"
+	end
+
+	def run
+		puts "running"
+	end
+end
+
+me = Human.new
+me.say("sushi")
+me.run
+this is calling the methods from the objects.
+since the say instances passes an arguement, I need to pass an arguement.
+when a method defines an arguement, thats how many arguements you have to pass.
+so if you have two methods, pass in two arguements
+the same way you define it is the same way you pass it
+=Blocks
+class Router
+	# options is an optional hash
+	def get(path, options = {}, &block)
+		puts "before block"
+		yield #when we define block, we use yield
+		puts "after block"
+	end
+end
+
+r = Router.new
+r.get("thing", {protocol: 'https'}) do
+	puts "inside block"
+end
+
+
+
+3.times do # this is a block, but doesnt' take an arguement
+	puts "hungry?"
+end
+================================================================================
+=Splat * = means in this case go ahead and pass as many arguements as you want
+#splat is used to define an unlimited amount of arguements.
+class Router
+	# options is an optional hash
+	def get(path, options = {}, &block)
+		puts "before block"
+		yield #when we define block, we use yield
+		puts "after block"
+	end
+
+	def debug(*data)
+		data.each do |datum|
+			puts datum
+		end
+	end
+end
+
+r = Router.new
+r.get("thing", {protocol: 'https'}) { puts "Inside block" }
+	puts "inside block"
+
+r.debug("hello", "people", "yo", "taco", "DPL FTW", "zip" 1, 51)
+end
+*ampersand means block*
+================================================================================
+DSL
+Domain Specific Language
+ruby has the ability to create dsl's easy.
+
+require 'dpl_cooking'
+
+cook('eggs') do
+	puts "serving eggs"
+end
+
+cook("bacon", style: "extra crisy") do
+	puts "serving bacon"
+end
+
+cook("toast", style: "light golden", add: "butter") do
+	puts "serving toast"
+end
+
+#this is just example of writing out the logic for serving the egg.
+require 'dpl_cooking'
+
+cook('eggs') do
+	#eggs are done cooking
+	puts "serving eggs"
+end
+
+chef = Chef.new
+eggs = chef.cook('eggs')
+while eggs.still_cooking?
+	puts "still cooking eggs"
+	break if eggs.cooked?
+end
+puts "serving eggs"
+
+bacon = chef.cook("bacon", style: "extra crispy")
+while bacon.still_cooking?
+	puts "still cooking bacon"
+	break.if bacon.cooked?
+end
+puts "serving bacon"
+dsl creates pattern so when people go to use it, it's simple easy for user.
+
+DRY = don't repeat yourself
+================================================================================
