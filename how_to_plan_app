@@ -1,0 +1,55 @@
+rails might not be the best solution for planning an app.
+the first thing we do is give application a name
+several reasons.
+you name it something. offically set in stone. application becomes
+my baby.
+after a name.
+whats the actual goal here?
+trying to solve some problem.
+all applications are trying to solve a problem.
+the name of my app is this, and it should do this
+mvp = min vile product
+smallest possibly thing. here is the name of my app and this is what
+it does.
+you have to plan for the mvp.
+application versioning has three numbers generally.
+M.m.p
+major.minor.patch
+4.1.1
+2.1.2
+the change between a major version. complete overhall how it's desgined
+1.1.0 interface doesn't change but possibly new aspects
+1.0.1 no need features but fixed a bug
+
+create a feature list -
+  go down and list all the features I want my app to have
+  go down and number them
+
+which ones do I aboustley have to have for this mvp to work.
+once we know the mvp features, what are the objects we are planning for
+
+models - all the different aspects
+users have to be able to log in - so user object
+what all does a user have.
+user                          realational database
+  name:string                  rails is a pretty smart idea
+  email:string
+  password:string
+  active status:boolean
+  status_update belongs to: user
+
+  since objects are relational, we need to look at what tools to incorpoate
+
+Name the app
+Describe what the app does in a few words (i.e. what problem is it trying to
+solve)
+create your feature list
+sort the feature list to create the mvp
+sort the remaining feauters to create susequent releases
+plan out all mvp objects (i.e. models and attributes)
+gather list of tools needed to build mvp
+discuss ui and user flow with mocks. a mock is image representation of what
+the ui might look like.
+couple tools for creating mocks.
+balsamiq-
+invision-

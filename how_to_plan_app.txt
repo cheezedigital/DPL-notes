@@ -1,0 +1,52 @@
+App name - Theater Express
+Desc - Find plays in different theaters and see what plays are
+ happening
+
+
+intro - or trying to solve the problem.
+
+ever have trouble finding a cool space to unwind while being entertained
+by a play? yea, I'm sure we've all experienced this. well, I've aggregated
+a list with all theaters from all states in all cities, and towns displaying
+plays to attend. introducing theater express - a jack of all trades for
+compiling plays in your area making your life hassle free when finding
+that benveloent play.
+
+feature list.
+
+search button fo shure.
+when arriving on the landing page, we have a home page with
+full width of page picture of a stage with velvet drapes, and
+we'll have a carosel like application of pages so if one doesn't understand the concept of
+the opera picture, we would also have an a sympthony like photo,
+and the last photo would be...
+google maps implemented (directions, pre-show drinks, post-show drinks)
+picture of venue.
+about the venue. historic, new?
+seating arrangements if seats need to be purchased, or just general admission
+maybe a globe (world map) like area with brite colors determining your area, and the theaters in
+the area?
+
+mvp -
+ searching feeders
+
+
+model theatre
+  name:stirng
+  theater:string
+  tickets_online:integer
+  location:string
+  photo_of_venue:image-url
+  description:text
+  phone:integer
+  time:string
+  food_and_drinks_available:boolean
+
+model user
+  name:string
+  location:string
+  play_type_interests:text
+
+the app is subject to take about 4 months to build from the ground up, as
+I'll need to compile data, and search state by state the local theaters.
+from there, i'll have a layout of what I'd like the site to look like.
