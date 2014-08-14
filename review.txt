@@ -1,0 +1,92 @@
+#define the method
+#takes 0 arguuments
+
+def do_stuff
+  "hello"
+end
+
+#call the method
+#called with 0 arguments
+do_stuff
+
+#requires 1 argument
+def do_more_stuff(stuff_to_do)
+  puts stuff_to_do
+end
+#called with 1 argument
+#passed 1 argument
+do_more_stuff('yo yo')
+
+#requires 2 arguments
+def do_even_more_stuff(first_thing, second_thing)
+end
+#passed 2 arguments to the method
+do_even_more_stuff('first thing', 'second thing')
+
+
+#defines 1 argument
+#argument is optional b/c it has a default value
+def do_another_ting(something = 'defalut')
+end
+do_another_thing
+do_another_thing('new default')
+
+
+
+
+link_to 'Click here', something_path, class: 'btn btn-default', method: :delete)
+
+
+render(:new)
+redirect_to(root_path)
+root 'static#index'
+resources :noms
+add_column
+
+
+[] square brackets is either an array or hash.
+array[index] #=> some value
+hash[key] #=> some vlaue
+
+Post.find(params[:id])
+
+params = {id: 1}
+
+table associations
+
+
+
+
+
+class Play
+  belongs_to :theater #=> theater_id
+end
+
+class Theater
+  has_many :plays
+end
+
+class SomeMigration
+  def change
+    add_column :plays, :theater_id, :integer
+  end
+end
+
+TheaterExpress.application.routes.draw do
+  get '/about-us' => 'static#about
+    resources :theaters do
+    resources :plays
+  end
+end
+
+class PlaysController
+  before_action :find_theater
+  def index
+    @plays = @theater.plays
+  end
+
+  private
+  def find_theater
+  @theater = Theater.find(params[:theater_id])
+  end
+end
